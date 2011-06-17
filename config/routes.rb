@@ -1,6 +1,10 @@
 Helpatraveler::Application.routes.draw do
 
+  get "requests/new"
+
   get "users/new"
+  
+  resources :requests
 
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
